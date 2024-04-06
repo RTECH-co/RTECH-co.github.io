@@ -16,9 +16,10 @@
             font-family: Arial, sans-serif;
             background-color: #121212;
             color: #fff;
-            display: flex;
-            flex-direction: column;
             min-height: 100vh;
+            position: relative; /* Make body a positioning context */
+            margin: 0; /* Remove default body margin */
+            padding-bottom: 100px; /* Adjust for footer height */
         }
 
         header {
@@ -49,7 +50,6 @@
         }
 
         .container {
-            flex: 1;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
@@ -92,6 +92,9 @@
             color: #fff;
             padding: 20px 0;
             text-align: center;
+            position: absolute;
+            bottom: 0; /* Stick footer to the bottom */
+            width: 100%; /* Full width */
         }
         
         .header-buttons {
