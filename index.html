@@ -237,15 +237,17 @@
             },
         });
 
-        function hideTextLogo() {
-            var img = document.getElementById('logo-img');
-            var text = document.getElementById('logo-text');
-            if (img.complete) {
-                text.style.display = 'none';
-            } else {
-                img.addEventListener('load', function() {
-                    text.style.display = 'none';
-                });
+      function hideTextLogo() {
+    var img = document.getElementById('logo-img');
+    var text = document.getElementById('logo-text');
+    if (img.complete) {
+        text.style.display = 'none';
+    } else {
+        img.addEventListener('load', function() {
+            text.style.display = 'none';
+        });
+    }
+}
             }
         }
     </script>
