@@ -18,7 +18,6 @@
             background-color: #121212;
             color: #fff;
             min-height: 100vh;
-            position: relative;
             margin: 0;
             padding-bottom: 70px; /* Adjust for footer height */
         }
@@ -42,9 +41,17 @@
             text-align: center;
         }
 
+        h1 {
+            margin-bottom: 20px;
+        }
+
         .swiper-slide img {
             width: 100%;
             height: auto;
+        }
+
+        .description {
+            margin-bottom: 20px;
         }
 
         .buttons {
@@ -69,15 +76,14 @@
 </head>
 <body>
     <header>
-        <div class="logo">
+        <div class="container">
             <a href="index.html">
-                <span id="logo-text">RTECH-hub</span> <!-- Link text from index -->
+                <h1>BunnyPad</h1>
             </a>
         </div>
     </header>
 
     <div class="container">
-        <h1>BunnyPad</h1>
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -88,6 +94,8 @@
                 </div>
                 <!-- Add more screenshots here -->
             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
         <div class="description">
             <p>This is the description of BunnyPad. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur lacinia ex, non facilisis ex semper non. Nulla facilisi.</p>
