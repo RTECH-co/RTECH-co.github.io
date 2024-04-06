@@ -22,6 +22,7 @@
             position: relative;
             margin: 0;
             padding-bottom: 70px;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
         }
 
         header {
@@ -195,6 +196,24 @@
         .swiper-button-next.new {
             right: 30px;
         }
+
+        .get-button {
+            margin-top: 20px;
+        }
+
+        .get-button a {
+            padding: 15px 30px;
+            background-color: #0073aa;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .get-button a:hover {
+            background-color: #005d7e;
+        }
     </style>
 </head>
 <body>
@@ -236,6 +255,7 @@
                         <p>A cute version of notepad for all your writing needs.</p>
                     </div>
 
+                    <!-- Add more fake apps here -->
                     <!-- App 2 -->
                     <div class="swiper-slide">
                         <img src="app2.png" alt="App 2 Icon">
@@ -260,8 +280,6 @@
                         <h3>App 5</h3>
                         <p>Description of App 5.</p>
                     </div>
-
-                    <!-- Add more fake apps here -->
                     <!-- App 6 -->
                     <div class="swiper-slide">
                         <img src="app6.png" alt="App 6 Icon">
@@ -296,6 +314,9 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
+            <div class="get-button">
+                <a href="#">Get</a>
+            </div>
         </section>
 
         <!-- Section 2: New Apps -->
@@ -303,7 +324,7 @@
             <h2 class="section-title">New Apps</h2>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <!-- Add apps here -->
+                    <!-- Add more fake apps here -->
                     <!-- App 11 -->
                     <div class="swiper-slide">
                         <img src="app11.png" alt="App 11 Icon">
@@ -337,6 +358,9 @@
                 </div>
                 <div class="swiper-button-prev new"></div>
                 <div class="swiper-button-next new"></div>
+            </div>
+            <div class="get-button">
+                <a href="#">Get</a>
             </div>
         </section>
     </div>
