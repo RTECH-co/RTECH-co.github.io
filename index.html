@@ -16,6 +16,9 @@
             font-family: Arial, sans-serif;
             background-color: #121212;
             color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
@@ -24,6 +27,7 @@
             padding: 20px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
         }
 
         header .logo {
@@ -45,6 +49,7 @@
         }
 
         .container {
+            flex: 1;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
@@ -87,7 +92,25 @@
             color: #fff;
             padding: 20px 0;
             text-align: center;
-            margin-top: 50px;
+        }
+        
+        .header-buttons {
+            display: flex;
+        }
+        
+        .header-buttons button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .header-buttons button:hover {
+            background-color: #777;
         }
     </style>
     <script>
@@ -104,6 +127,11 @@
         <div class="logo">
             <img id="logo-img" src="logo.png" alt="RTECH-hub Logo" onload="hideTextLogo()"> <!-- Image logo -->
             <a id="logo-text" href="#">RTECH-hub</a> <!-- Text logo -->
+        </div>
+        
+        <div class="header-buttons">
+            <button>About Us</button>
+            <button>Hub App</button>
         </div>
     </header>
 
