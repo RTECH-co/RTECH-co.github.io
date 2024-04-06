@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BunnyPad - App Landing Page</title>
+    <title>BunnyPad - App Page</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
+        /* Your CSS styles here */
         /* Reset CSS */
         * {
             margin: 0;
@@ -18,20 +19,16 @@
             background-color: #121212;
             color: #fff;
             min-height: 100vh;
+            position: relative;
             margin: 0;
-            padding-bottom: 70px; /* Adjust for footer height */
+            padding-bottom: 70px;
         }
 
         header, footer {
             background-color: #333;
             color: #fff;
             padding: 20px;
-        }
-
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            text-align: center;
         }
 
         .container {
@@ -41,24 +38,32 @@
             text-align: center;
         }
 
-        h1 {
+        .app-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .app-description {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #aaa;
+        }
+
+        .app-screenshots {
+            display: flex;
+            justify-content: center;
             margin-bottom: 20px;
         }
 
-        .swiper-slide img {
-            width: 100%;
+        .app-screenshots img {
+            width: 300px;
             height: auto;
+            margin: 0 10px;
+            border-radius: 10px;
         }
 
-        .description {
-            margin-bottom: 20px;
-        }
-
-        .buttons {
-            margin-top: 20px;
-        }
-
-        .btn {
+        .download-button {
             padding: 15px 30px;
             background-color: #0073aa;
             color: #fff;
@@ -66,48 +71,75 @@
             border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
-            margin-right: 10px;
+            transition: background-color 0.3s ease;
         }
 
-        .btn:hover {
+        .download-button:hover {
             background-color: #005d7e;
+        }
+
+        .swiper-slide {
+            background-color: #444;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .swiper-slide img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 10px;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <a href="index.html">
-                <h1>BunnyPad</h1>
-            </a>
-        </div>
+        <a href="index.html" class="logo">RTECH-hub</a>
     </header>
 
     <div class="container">
+        <h1 class="app-title">BunnyPad</h1>
+        <p class="app-description">A cute version of a notepad for all your note-taking needs.</p>
+
+        <div class="app-screenshots">
+            <img src="bunnypad.png" alt="Screenshot 1">
+            <img src="bunnypad2.png" alt="Screenshot 2">
+        </div>
+
+        <a href="bunnypad.zip" class="download-button">Download Now</a>
+
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="bunnypad.png" alt="Screenshot 1">
+                    <h2>Features</h2>
+                    <p>Feature 1 description goes here.</p>
+                    <p>Feature 2 description goes here.</p>
                 </div>
                 <div class="swiper-slide">
-                    <img src="bunnypad2.png" alt="Screenshot 2">
+                    <h2>Reviews</h2>
+                    <p>Review 1 description goes here.</p>
+                    <p>Review 2 description goes here.</p>
                 </div>
-                <!-- Add more screenshots here -->
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
-        <div class="description">
-            <p>This is the description of BunnyPad. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur lacinia ex, non facilisis ex semper non. Nulla facilisi.</p>
-        </div>
-        <div class="buttons">
-            <a href="bunnypad_folder/" class="btn">Download Now</a>
-            <a href="#" class="btn">Learn More</a>
-        </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 BunnyPad. All rights reserved.</p>
+        <p>&copy; 2024 RTECH-hub. All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
