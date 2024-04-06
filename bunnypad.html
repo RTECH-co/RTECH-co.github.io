@@ -21,8 +21,7 @@
             min-height: 100vh;
             position: relative;
             margin: 0;
-            padding-bottom: 70px;
-            overflow-y: hidden; /* Hide vertical scrollbar */
+            overflow: hidden; /* Hide both horizontal and vertical scrollbar */
         }
 
         header {
@@ -79,7 +78,6 @@
             margin: 100px auto 0;
             padding: 20px;
             text-align: center;
-            overflow-y: auto; /* Add vertical scrollbar to container if content overflows */
         }
 
         h1 {
@@ -128,6 +126,10 @@
             padding-bottom: 50px;
         }
         
+        .swiper-wrapper {
+            display: flex;
+        }
+        
         .swiper-slide {
             background-color: #444;
             color: #fff;
@@ -138,6 +140,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            flex: 0 0 auto;
         }
         
         .swiper-slide img {
@@ -146,30 +149,31 @@
             margin-bottom: 20px;
         }
 
-        .search-form {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .search-form input[type="text"] {
-            padding: 10px;
-            width: 300px;
-            border-radius: 5px 0 0 5px;
-            border: none;
-        }
-
-        .search-form button {
-            padding: 10px 20px;
+        .swiper-button-prev,
+        .swiper-button-next {
             background-color: #0073aa;
             color: #fff;
+            padding: 10px 20px;
             border: none;
-            border-radius: 0 5px 5px 0;
+            border-radius: 5px;
             cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
         }
 
-        .search-form button:hover {
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
             background-color: #005d7e;
+        }
+
+        .swiper-button-prev {
+            left: 10px;
+        }
+
+        .swiper-button-next {
+            right: 10px;
         }
     </style>
 </head>
@@ -206,6 +210,8 @@
                     <img src="bunnypad2.png" alt="Screenshot 2">
                 </div>
             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
 
@@ -218,9 +224,9 @@
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
             spaceBetween: 30,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
         });
     </script>
