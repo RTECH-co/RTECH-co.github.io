@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BunnyPad - Notepad App</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="#">
-                <span id="logo-text">BunnyPad</span>
+                <img src="logo.png" alt="BunnyPad Logo">
             </a>
         </div>
     </header>
@@ -21,22 +22,38 @@
             <p>A cute version of notepad</p>
         </section>
 
-        <div class="screenshots">
-            <div class="screenshot">
-                <img src="bunnypad.png" alt="BunnyPad Screenshot 1">
-            </div>
-            <div class="screenshot">
-                <img src="bunnypad2.png" alt="BunnyPad Screenshot 2">
-            </div>
+        <div class="description">
+            <p>This is a brief description of BunnyPad, highlighting its features and benefits.</p>
         </div>
 
-        <div class="cta">
-            <a href="bunnypad.html" class="btn">Download Now</a>
+        <div class="screenshots">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="bunnypad.png" alt="BunnyPad Screenshot 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="bunnypad2.png" alt="BunnyPad Screenshot 2">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2024 BunnyPad. All rights reserved.</p>
     </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
 </body>
 </html>
