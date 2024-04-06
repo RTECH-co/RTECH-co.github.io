@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Name - RTECH-hub</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>Bunny Pad - App Page</title>
     <style>
         /* Your CSS styles here */
         /* Reset CSS */
@@ -19,8 +18,9 @@
             background-color: #121212;
             color: #fff;
             min-height: 100vh;
-            position: relative; /* Make body a positioning context */
-            margin: 0; /* Remove default body margin */
+            position: relative;
+            margin: 0;
+            padding-bottom: 70px;
         }
 
         header {
@@ -32,39 +32,10 @@
             justify-content: space-between;
         }
 
-        header .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        header .logo img {
-            max-width: 200px; /* Set maximum width */
-            height: auto; /* Maintain aspect ratio */
+        .logo img {
+            max-width: 200px;
+            height: auto;
             margin-right: 10px;
-        }
-
-        header .logo a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 24px;
-        }
-
-        .header-buttons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .header-button {
-            padding: 10px 20px;
-            background-color: #0073aa;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .header-button:hover {
-            background-color: #005d7e;
         }
 
         .container {
@@ -74,16 +45,12 @@
             text-align: center;
         }
 
-        h1 {
+        .app-header {
             margin-bottom: 20px;
         }
 
-        .app-info {
-            margin-top: 50px;
-        }
-
-        .app-info img {
-            max-width: 100%;
+        .app-icon img {
+            width: 200px;
             height: auto;
             margin-bottom: 20px;
         }
@@ -92,61 +59,97 @@
             margin-bottom: 20px;
         }
 
-        .swiper-container {
-            margin-top: 50px;
-            padding-bottom: 50px; /* Adjust for navigation buttons */
-        }
-
-        .swiper-slide {
-            background-color: #444;
-            color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .swiper-slide img {
-            max-width: 100%;
-            height: auto;
+        .app-actions {
             margin-bottom: 20px;
         }
 
-        .cta .btn {
-            padding: 15px 30px;
+        .app-actions button {
+            padding: 10px 20px;
             background-color: #0073aa;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            text-decoration: none;
+            margin: 0 5px;
         }
 
-        .cta .btn:hover {
+        .app-actions button:hover {
             background-color: #005d7e;
         }
 
-        footer {
-            background-color: #333;
+        .comments-section {
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .comments-section textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: none;
+        }
+
+        .comments-section button {
+            padding: 10px 20px;
+            background-color: #0073aa;
             color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: absolute;
-            bottom: 0; /* Stick footer to the bottom */
-            width: 100%; /* Full width */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .comments-section button:hover {
+            background-color: #005d7e;
+        }
+        
+        .rate-this-app {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rate-this-app span {
+            margin-right: 10px;
+        }
+
+        .rate-this-app input[type="range"] {
+            width: 200px;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 5px;
+            background-color: #555;
+            outline: none;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+
+        .rate-this-app input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background-color: #0073aa;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .rate-this-app input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background-color: #0073aa;
+            border-radius: 50%;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="index.html">
-                <img src="logo.png" alt="RTECH-hub Logo"> <!-- Image logo -->
-                <span>RTECH-hub</span> <!-- Text logo -->
-            </a>
+            <img src="icons/logo.png" alt="RTECH-hub Logo">
         </div>
         
         <div class="header-buttons">
@@ -156,63 +159,37 @@
     </header>
 
     <div class="container">
-        <div class="app-info">
-            <img src="app-icon.png" alt="App Icon">
-            <h1>App Name</h1>
-            <p class="app-description">App description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div class="cta">
-                <a href="#" class="btn">Get App</a>
-            </div>
+        <div class="app-header">
+            <h1>Bunny Pad</h1>
         </div>
 
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <h2>Slide 1</h2>
-                    <p>Description for Slide 1</p>
-                    <img src="app-image-1.jpg" alt="App Image 1">
-                </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                    <h2>Slide 2</h2>
-                    <p>Description for Slide 2</p>
-                    <img src="app-image-2.jpg" alt="App Image 2">
-                </div>
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                    <h2>Slide 3</h2>
-                    <p>Description for Slide 3</p>
-                    <img src="app-image-3.jpg" alt="App Image 3">
-                </div>
-                <!-- Slide 4 -->
-                <div class="swiper-slide">
-                    <h2>Slide 4</h2>
-                    <p>Description for Slide 4</p>
-                    <img src="app-image-4.jpg" alt="App Image 4">
-                </div>
-            </div>
-            <!-- Navigation buttons -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+        <div class="app-icon">
+            <img src="icons/bnnypd.png" alt="Bunny Pad Icon">
+        </div>
+
+        <div class="app-description">
+            <p>A cute version of notepad for jotting down your ideas!</p>
+        </div>
+
+        <div class="app-actions">
+            <button>Get</button>
+            <button>Back to Homepage</button>
+        </div>
+
+        <div class="comments-section">
+            <h2>Comments</h2>
+            <textarea placeholder="Leave a comment..."></textarea>
+            <button>Submit</button>
+        </div>
+
+        <div class="rate-this-app">
+            <span>Rate this app:</span>
+            <input type="range" min="1" max="5" value="3" step="1">
         </div>
     </div>
 
     <footer>
         <p>&copy; 2024 RTECH-hub. All rights reserved.</p>
     </footer>
-
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script>
 </body>
 </html>
