@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RTECH-hub - Landing Page</title>
+    <title>RTECH-hub - Bunnypad</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
         /* Your CSS styles here */
@@ -32,6 +32,11 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
         }
 
         header .logo {
@@ -40,7 +45,7 @@
         }
 
         header .logo img {
-            max-width: 200px;
+            max-width: 150px;
             height: auto;
             margin-right: 10px;
         }
@@ -71,7 +76,7 @@
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 100px auto 0;
             padding: 20px;
             text-align: center;
             overflow-y: auto; /* Add vertical scrollbar to container if content overflows */
@@ -85,9 +90,9 @@
             background-color: #1f1f1f;
             padding: 100px 20px;
             text-align: center;
-            margin-top: 50px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
         }
 
         .cta {
@@ -119,7 +124,7 @@
         }
         
         .swiper-container {
-            margin-top: 50px;
+            margin-top: 20px;
             padding-bottom: 50px;
         }
         
@@ -136,7 +141,7 @@
         }
         
         .swiper-slide img {
-            max-width: 100%;
+            max-width: 200px;
             height: auto;
             margin-bottom: 20px;
         }
@@ -172,7 +177,7 @@
     <header>
         <div class="logo">
             <a href="index.html">
-                <span id="logo-text">RTECH-hub</span>
+                <img src="path/to/logo.png" alt="RTECH-hub">
             </a>
         </div>
         
@@ -183,42 +188,28 @@
     </header>
 
     <div class="container">
-        <section class="hero">
-            <h1>Welcome to RTECH-hub</h1>
-            <p>Your one-stop destination for all your app needs.</p>
-        </section>
-
-        <div class="cta">
-            <a href="#" class="btn">Get Started</a>
-        </div>
-
-        <div class="search-form">
-            <form action="name-app.html" method="GET">
-                <input type="text" name="app" placeholder="Search for an app">
-                <button type="submit">Search</button>
-            </form>
+        <div class="hero">
+            <img src="path/to/bunnypad.png" alt="Bunnypad">
+            <h1>Bunnypad</h1>
+            <p>A cute version of Notepad.</p>
+            <div class="cta">
+                <a href="path/to/download" class="btn">Download Now</a>
+            </div>
         </div>
 
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <!-- Most Used Apps -->
+                <!-- Add screenshots in swiper-slide -->
                 <div class="swiper-slide">
-                    <h2>Most Used Apps</h2>
-                    <!-- Add apps here -->
+                    <img src="path/to/screenshot1.png" alt="Screenshot 1">
                 </div>
-                <!-- New Apps -->
                 <div class="swiper-slide">
-                    <h2>New Apps</h2>
-                    <!-- Add apps here -->
+                    <img src="path/to/screenshot2.png" alt="Screenshot 2">
                 </div>
-                <!-- Featured Apps -->
                 <div class="swiper-slide">
-                    <h2>Featured Apps</h2>
-                    <!-- Add apps here -->
+                    <img src="path/to/screenshot3.png" alt="Screenshot 3">
                 </div>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
     </div>
 
@@ -229,11 +220,11 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 30,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
             },
         });
     </script>
