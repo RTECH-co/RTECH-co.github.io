@@ -92,6 +92,29 @@
             margin-bottom: 20px;
         }
 
+        .swiper-container {
+            margin-top: 50px;
+            padding-bottom: 50px; /* Adjust for navigation buttons */
+        }
+
+        .swiper-slide {
+            background-color: #444;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .swiper-slide img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
         .cta .btn {
             padding: 15px 30px;
             background-color: #0073aa;
@@ -141,10 +164,55 @@
                 <a href="#" class="btn">Get App</a>
             </div>
         </div>
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <h2>Slide 1</h2>
+                    <p>Description for Slide 1</p>
+                    <img src="app-image-1.jpg" alt="App Image 1">
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <h2>Slide 2</h2>
+                    <p>Description for Slide 2</p>
+                    <img src="app-image-2.jpg" alt="App Image 2">
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <h2>Slide 3</h2>
+                    <p>Description for Slide 3</p>
+                    <img src="app-image-3.jpg" alt="App Image 3">
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <h2>Slide 4</h2>
+                    <p>Description for Slide 4</p>
+                    <img src="app-image-4.jpg" alt="App Image 4">
+                </div>
+            </div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
     </div>
 
     <footer>
         <p>&copy; 2024 RTECH-hub. All rights reserved.</p>
     </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 </html>
