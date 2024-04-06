@@ -19,9 +19,9 @@
             background-color: #121212;
             color: #fff;
             min-height: 100vh;
-            position: relative; /* Make body a positioning context */
-            margin: 0; /* Remove default body margin */
-            padding-bottom: 70px; /* Adjust for footer height */
+            position: relative;
+            margin: 0;
+            padding-bottom: 70px;
         }
 
         header {
@@ -39,8 +39,8 @@
         }
 
         header .logo img {
-            max-width: 200px; /* Set maximum width */
-            height: auto; /* Maintain aspect ratio */
+            max-width: 200px;
+            height: auto;
             margin-right: 10px;
         }
 
@@ -48,7 +48,6 @@
             text-decoration: none;
             color: #fff;
             font-size: 24px;
-            display: none; /* Hide text logo by default */
         }
 
         .header-buttons {
@@ -89,6 +88,57 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        .cta {
+            margin-top: 50px;
+        }
+
+        .cta .btn {
+            padding: 15px 30px;
+            background-color: #0073aa;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .cta .btn:hover {
+            background-color: #005d7e;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .swiper-container {
+            margin-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        .swiper-slide {
+            background-color: #444;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .swiper-slide img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
         .search-form {
             margin-top: 20px;
             display: flex;
@@ -114,67 +164,16 @@
         .search-form button:hover {
             background-color: #005d7e;
         }
-
-        .section-title {
-            margin-top: 50px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .app-slider {
-            margin-top: 20px;
-        }
-
-        .app-card {
-            padding: 20px;
-            background-color: #333;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        .app-card img {
-            max-width: 100px;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .app-card h3 {
-            margin-top: 10px;
-            font-size: 18px;
-        }
-
-        .app-card p {
-            margin-top: 10px;
-            font-size: 14px;
-        }
-
-        .app-card .btn {
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #0073aa;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .app-card .btn:hover {
-            background-color: #005d7e;
-        }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="#">
-                <img id="logo-img" src="logo.png" alt="RTECH-hub Logo" onload="hideTextLogo()"> <!-- Image logo -->
-                <span id="logo-text">RTECH-hub</span> <!-- Text logo -->
+                <span id="logo-text">RTECH-hub</span>
             </a>
         </div>
-
+        
         <div class="header-buttons">
             <button class="header-button">About Us</button>
             <button class="header-button">Hub App</button>
@@ -187,6 +186,10 @@
             <p>Your one-stop destination for all your app needs.</p>
         </section>
 
+        <div class="cta">
+            <a href="#" class="btn">Get Started</a>
+        </div>
+
         <div class="search-form">
             <form action="name-app.html" method="GET">
                 <input type="text" name="app" placeholder="Search for an app">
@@ -194,24 +197,26 @@
             </form>
         </div>
 
-        <!-- Featured Apps -->
-        <div class="section-title">Featured Apps</div>
-        <div class="app-slider swiper-container">
+        <div class="swiper-container">
             <div class="swiper-wrapper">
-                <!-- App cards will be dynamically generated here -->
+                <!-- Most Used Apps -->
+                <div class="swiper-slide">
+                    <h2>Most Used Apps</h2>
+                    <!-- Add apps here -->
+                </div>
+                <!-- New Apps -->
+                <div class="swiper-slide">
+                    <h2>New Apps</h2>
+                    <!-- Add apps here -->
+                </div>
+                <!-- Featured Apps -->
+                <div class="swiper-slide">
+                    <h2>Featured Apps</h2>
+                    <!-- Add apps here -->
+                </div>
             </div>
-            <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-        </div>
-
-        <!-- New Apps -->
-        <div class="section-title">New Apps</div>
-        <div class="app-slider swiper-container">
-            <div class="swiper-wrapper">
-                <!-- App cards will be dynamically generated here -->
-            </div>
             <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
         </div>
     </div>
 
@@ -219,63 +224,16 @@
         <p>&copy; 2024 RTECH-hub. All rights reserved.</p>
     </footer>
 
-    <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        // Sample app data
-        var apps = [
-            {
-                name: "Bunny Pad",
-                description: "A cute version of notepad",
-                icon: "bnnypd.png",
-                link: "bunny-pad.html"
-            },
-            // Add more app objects here
-        ];
-
-        // Function to generate app cards
-        function generateAppCards(apps, container) {
-            var swiperWrapper = document.querySelector(container + " .swiper-wrapper");
-            apps.forEach(function(app) {
-                var appCard = `
-                    <div class="swiper-slide">
-                        <div class="app-card">
-                            <img src="${app.icon}" alt="${app.name}">
-                            <h3>${app.name}</h3>
-                            <p>${app.description}</p>
-                            <a href="${app.link}" class="btn">Get</a>
-                        </div>
-                    </div>
-                `;
-                swiperWrapper.innerHTML += appCard;
-            });
-        }
-
-        // Generate app cards for each section
-        generateAppCards(apps, ".app-slider");
-        
-        // Initialize Swiper for each app slider
-        var swiper = new Swiper('.app-slider', {
+        var swiper = new Swiper('.swiper-container', {
             slidesPerView: 3,
-            spaceBetween: 20,
+            spaceBetween: 30,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
         });
-
-        // Function to hide text logo when image logo is loaded
-        function hideTextLogo() {
-            var img = document.getElementById('logo-img');
-            var text = document.getElementById('logo-text');
-            if (img.complete) {
-                text.style.display = 'none';
-            } else {
-                img.addEventListener('load', function() {
-                    text.style.display = 'none';
-                });
-            }
-        }
     </script>
 </body>
 </html>
