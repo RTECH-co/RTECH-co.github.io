@@ -3,162 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BunnyPad - Landing Page</title>
-    <style>
-        /* Your CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #fff;
-            min-height: 100vh;
-            position: relative;
-            margin: 0;
-            padding-bottom: 70px;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        header .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        header .logo img {
-            max-width: 200px;
-            height: auto;
-            margin-right: 10px;
-        }
-
-        header .logo a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 24px;
-        }
-
-        .header-buttons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .header-button {
-            padding: 10px 20px;
-            background-color: #0073aa;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .header-button:hover {
-            background-color: #005d7e;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-        }
-
-        .hero {
-            background-color: #1f1f1f;
-            padding: 100px 20px;
-            text-align: center;
-            margin-top: 50px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .cta {
-            margin-top: 50px;
-        }
-
-        .cta .btn {
-            padding: 15px 30px;
-            background-color: #0073aa;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-
-        .cta .btn:hover {
-            background-color: #005d7e;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Additional CSS for the landing page */
-        .landing-content {
-            background-color: #303030;
-            color: #ccc;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 50px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .landing-content h2 {
-            color: #fff;
-            margin-bottom: 20px;
-        }
-
-        .landing-content .cta .btn {
-            background-color: #0073aa;
-            color: #fff;
-            border-radius: 5px;
-            padding: 15px 30px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-
-        .landing-content .cta .btn:hover {
-            background-color: #005d7e;
-        }
-    </style>
+    <title>BunnyPad - Notepad App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <!-- Header content -->
+        <div class="logo">
+            <a href="#">
+                <span id="logo-text">BunnyPad</span>
+            </a>
+        </div>
     </header>
 
     <div class="container">
         <section class="hero">
-            <!-- Hero content -->
+            <h1>BunnyPad</h1>
+            <p>A cute version of notepad</p>
         </section>
 
-        <div class="landing-content">
-            <h2>BunnyPad - A Cute Version of Notepad</h2>
-            <p>Description of BunnyPad goes here...</p>
-            <div class="cta">
-                <a href="path_to_bunnypad_file/bunnypad_setup.exe" class="btn" download>Download Now</a>
+        <div class="screenshots">
+            <div class="screenshot">
+                <img src="bunnypad.png" alt="BunnyPad Screenshot 1">
             </div>
+            <div class="screenshot">
+                <img src="bunnypad2.png" alt="BunnyPad Screenshot 2">
+            </div>
+        </div>
+
+        <div class="cta">
+            <a href="bunnypad.html" class="btn">Download Now</a>
         </div>
     </div>
 
     <footer>
-        <!-- Footer content -->
+        <p>&copy; 2024 BunnyPad. All rights reserved.</p>
     </footer>
 </body>
 </html>
