@@ -22,7 +22,6 @@
             position: relative; /* Make body a positioning context */
             margin: 0; /* Remove default body margin */
             padding-bottom: 70px; /* Adjust for footer height */
-            overflow-x: hidden; /* Remove horizontal scrollbar */
         }
 
         header {
@@ -141,52 +140,53 @@
             margin-bottom: 20px;
         }
 
-        .app {
-            background-color: #333;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 10px;
-            max-width: 200px;
+        .search-form {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
         }
 
-        .app img {
+        .search-form input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px 0 0 5px;
+            border: none;
+        }
+
+        .search-form button {
+            padding: 10px 20px;
+            background-color: #0073aa;
+            color: #fff;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .search-form button:hover {
+            background-color: #005d7e;
+        }
+
+        .section-title {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .app-icon {
             width: 100px;
             height: 100px;
+            background-color: #fff; /* Placeholder color */
             border-radius: 50%;
             margin-bottom: 10px;
         }
 
-        .app h3 {
+        .app-name {
+            font-weight: bold;
             margin-bottom: 5px;
         }
 
-        .app p {
-            font-size: 14px;
-        }
-
-        .swiper-button-next,
-        .swiper-button-prev {
-            color: #fff;
-            font-size: 18px;
-            width: 40px;
-            height: 40px;
-            background-color: #0073aa;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 10;
-        }
-
-        .swiper-button-prev {
-            left: 10px;
-        }
-
-        .swiper-button-next {
-            right: 10px;
+        .app-description {
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -222,47 +222,51 @@
             </form>
         </div>
 
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!-- Most Used Apps -->
-                <div class="swiper-slide">
-                    <h2>Most Used Apps</h2>
-                    <!-- App 1 -->
-                    <div class="app">
-                        <img src="app1-icon.png" alt="App 1 Icon">
-                        <h3>App 1 Name</h3>
-                        <p>Short blurb about App 1.</p>
+        <!-- Sub-hero section for Featured Apps -->
+        <div class="sub-hero">
+            <h2 class="section-title">Featured Apps</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <!-- Template for App 1 -->
+                        <div class="app-icon"></div>
+                        <div class="app-name">App 1</div>
+                        <div class="app-description">Description of App 1 goes here.</div>
                     </div>
-                    <!-- App 2 -->
-                    <div class="app">
-                        <img src="app2-icon.png" alt="App 2 Icon">
-                        <h3>App 2 Name</h3>
-                        <p>Short blurb about App 2.</p>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <!-- Template for App 2 -->
+                        <div class="app-icon"></div>
+                        <div class="app-name">App 2</div>
+                        <div class="app-description">Description of App 2 goes here.</div>
                     </div>
-                    <!-- Add more apps as needed -->
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <!-- Template for App 3 -->
+                        <div class="app-icon"></div>
+                        <div class="app-name">App 3</div>
+                        <div class="app-description">Description of App 3 goes here.</div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <!-- Template for App 4 -->
+                        <div class="app-icon"></div>
+                        <div class="app-name">App 4</div>
+                        <div class="app-description">Description of App 4 goes here.</div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <!-- Template for App 5 -->
+                        <div class="app-icon"></div>
+                        <div class="app-name">App 5</div>
+                        <div class="app-description">Description of App 5 goes here.</div>
+                    </div>
                 </div>
-
-                <!-- New Apps -->
-                <div class="swiper-slide">
-                    <h2>New Apps</h2>
-                    <!-- App 3 -->
-                    <div class="app">
-                        <img src="app3-icon.png" alt="App 3 Icon">
-                        <h3>App 3 Name</h3>
-                        <p>Short blurb about App 3.</p>
-                    </div>
-                    <!-- App 4 -->
-                    <div class="app">
-                        <img src="app4-icon.png" alt="App 4 Icon">
-                        <h3>App 4 Name</h3>
-                        <p>Short blurb about App 4.</p>
-                    </div>
-                    <!-- Add more apps as needed -->
-                </div>
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-            <!-- Navigation buttons -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
         </div>
     </div>
 
