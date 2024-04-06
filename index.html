@@ -119,6 +119,7 @@
         .swiper-container {
             margin-top: 50px;
             padding-bottom: 50px;
+            position: relative;
         }
         
         .swiper-slide {
@@ -164,6 +165,36 @@
         .search-form button:hover {
             background-color: #005d7e;
         }
+
+        /* Adjustments */
+        .swiper-button-prev,
+        .swiper-button-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .swiper-button-prev {
+            left: 10px;
+        }
+
+        .swiper-button-next {
+            right: 10px;
+        }
+
+        .swiper-button-prev.new {
+            left: 30px;
+        }
+
+        .swiper-button-next.new {
+            right: 30px;
+        }
     </style>
 </head>
 <body>
@@ -208,42 +239,6 @@
                         </div>
                     </div>
                     <!-- Add more apps here -->
-                    <!-- Fake App 2 -->
-                    <div class="swiper-slide">
-                        <div class="app">
-                            <img src="fakeapp2.png" alt="FakeApp2">
-                            <h3>FakeApp2</h3>
-                            <p>Description of FakeApp2</p>
-                            <a href="fakeapp2-details.html" class="get-btn">Get</a>
-                        </div>
-                    </div>
-                    <!-- Fake App 3 -->
-                    <div class="swiper-slide">
-                        <div class="app">
-                            <img src="fakeapp3.png" alt="FakeApp3">
-                            <h3>FakeApp3</h3>
-                            <p>Description of FakeApp3</p>
-                            <a href="fakeapp3-details.html" class="get-btn">Get</a>
-                        </div>
-                    </div>
-                    <!-- Fake App 4 -->
-                    <div class="swiper-slide">
-                        <div class="app">
-                            <img src="fakeapp4.png" alt="FakeApp4">
-                            <h3>FakeApp4</h3>
-                            <p>Description of FakeApp4</p>
-                            <a href="fakeapp4-details.html" class="get-btn">Get</a>
-                        </div>
-                    </div>
-                    <!-- Fake App 5 -->
-                    <div class="swiper-slide">
-                        <div class="app">
-                            <img src="fakeapp5.png" alt="FakeApp5">
-                            <h3>FakeApp5</h3>
-                            <p>Description of FakeApp5</p>
-                            <a href="fakeapp5-details.html" class="get-btn">Get</a>
-                        </div>
-                    </div>
                 </div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
@@ -269,8 +264,8 @@
                 <div class="swiper-wrapper">
                     <!-- Add apps here -->
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev new"></div>
+                <div class="swiper-button-next new"></div>
             </div>
         </section>
 
@@ -281,8 +276,8 @@
                 <div class="swiper-wrapper">
                     <!-- Add apps here -->
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev new"></div>
+                <div class="swiper-button-next new"></div>
             </div>
         </section>
     </div>
@@ -293,12 +288,40 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper('.swiper-container', {
+        // Initialize Swiper sliders
+        var swiper1 = new Swiper('.swiper-container:nth-of-type(1)', {
             slidesPerView: 3,
             spaceBetween: 30,
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-container:nth-of-type(1) .swiper-button-next',
+                prevEl: '.swiper-container:nth-of-type(1) .swiper-button-prev',
+            },
+        });
+
+        var swiper2 = new Swiper('.swiper-container:nth-of-type(2)', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-container:nth-of-type(2) .swiper-button-next',
+                prevEl: '.swiper-container:nth-of-type(2) .swiper-button-prev',
+            },
+        });
+
+        var swiper3 = new Swiper('.swiper-container:nth-of-type(3)', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-container:nth-of-type(3) .swiper-button-next',
+                prevEl: '.swiper-container:nth-of-type(3) .swiper-button-prev',
+            },
+        });
+
+        var swiper4 = new Swiper('.swiper-container:nth-of-type(4)', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-container:nth-of-type(4) .swiper-button-next',
+                prevEl: '.swiper-container:nth-of-type(4) .swiper-button-prev',
             },
         });
     </script>
