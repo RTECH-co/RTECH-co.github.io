@@ -91,18 +91,18 @@
         }
     </style>
     <script>
-        function displayTextLogo() {
+        function hideTextLogo() {
             var logoText = document.getElementById('logo-text');
             var logoImg = document.getElementById('logo-img');
-            logoText.style.display = 'inline';
-            logoImg.style.display = 'none';
+            logoText.style.display = 'none';
+            logoImg.style.display = 'inline';
         }
     </script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img id="logo-img" src="logo.png" alt="RTECH-hub Logo" onerror="displayTextLogo()"> <!-- Image logo -->
+            <img id="logo-img" src="logo.png" alt="RTECH-hub Logo" onload="hideTextLogo()"> <!-- Image logo -->
             <a id="logo-text" href="#">RTECH-hub</a> <!-- Text logo -->
         </div>
     </header>
