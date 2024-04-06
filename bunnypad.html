@@ -3,42 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BunnyPad - Notepad App</title>
+    <title>BunnyPad - App Landing Page</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
         /* Your CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212; /* Dark gray background */
-            color: #fff; /* Light text color */
+        /* Reset CSS */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
-        header {
-            background-color: #333; /* Dark gray header background */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            min-height: 100vh;
+            position: relative;
+            margin: 0;
+            padding-bottom: 70px;
+        }
+
+        header, footer {
+            background-color: #333;
             color: #fff;
             padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            text-align: center;
         }
 
-        header .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        header .logo img {
+        .logo {
+            display: block;
+            margin: 0 auto;
             max-width: 200px;
-            height: auto;
-            margin-right: 10px;
-        }
-
-        header .logo a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 24px;
+            margin-bottom: 20px;
         }
 
         .container {
@@ -46,17 +43,10 @@
             margin: 0 auto;
             padding: 20px;
             text-align: center;
-            color: #333; /* Dark text color */
         }
 
-        .hero {
-            background-color: #1f1f1f; /* Medium gray background */
-            padding: 40px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .screenshots {
+        h1, h2 {
+            color: #fff;
             margin-bottom: 20px;
         }
 
@@ -66,97 +56,70 @@
         }
 
         .swiper-slide img {
-            max-width: 100%; /* Make images responsive */
+            max-width: 100%;
             height: auto;
-            border-radius: 10px; /* Add rounded corners */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
         }
 
         .description {
-            margin-bottom: 20px;
+            color: #fff;
+            margin-top: 20px;
         }
 
-        .description p {
-            font-size: 18px; /* Increase font size for description */
-        }
-
-        .cta-button {
+        .download-button {
             padding: 15px 30px;
-            background-color: #0073aa; /* Blue button */
+            background-color: #0073aa;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
         }
 
-        .cta-button:hover {
-            background-color: #005d7e; /* Darker blue on hover */
-        }
-
-        footer {
-            background-color: #333; /* Dark gray footer background */
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        .download-button:hover {
+            background-color: #005d7e;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="#">
-                <img src="logo.png" alt="RTECH-hub Logo">
-            </a>
+            <img src="logo.png" alt="BunnyPad Logo">
         </div>
     </header>
 
     <div class="container">
-        <section class="hero">
-            <h1>BunnyPad</h1>
-            <p>A cute version of notepad</p>
-        </section>
+        <h1>BunnyPad</h1>
 
-        <div class="description">
-            <p>This is a brief description of BunnyPad, highlighting its features and benefits.</p>
-        </div>
-
-        <div class="screenshots">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="bunnypad.png" alt="BunnyPad Screenshot 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="bunnypad2.png" alt="BunnyPad Screenshot 2">
-                    </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="bunnypad.png" alt="BunnyPad Screenshot"></div>
+                <div class="swiper-slide"><img src="bunnypad2.png" alt="BunnyPad Screenshot"></div>
             </div>
         </div>
 
-        <a href="bunnypad_download_link.html" class="cta-button">Download Now</a>
+        <div class="description">
+            <p>This is the description of BunnyPad. It's a fantastic app for your notetaking needs.</p>
+        </div>
+
+        <a href="/path/to/bunnypad" class="download-button">Download Now</a>
     </div>
 
     <footer>
-        <p>&copy; 2024 BunnyPad. All rights reserved.</p>
+        <p>&copy; 2024 RTECH-hub. All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
         });
     </script>
 </body>
 </html>
-
