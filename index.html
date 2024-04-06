@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RTECH-hub - Landing Page</title>
+    <title>App Name - RTECH-hub</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
         /* Your CSS styles here */
@@ -21,7 +21,6 @@
             min-height: 100vh;
             position: relative; /* Make body a positioning context */
             margin: 0; /* Remove default body margin */
-            padding-bottom: 70px; /* Adjust for footer height */
         }
 
         header {
@@ -48,7 +47,6 @@
             text-decoration: none;
             color: #fff;
             font-size: 24px;
-            display: none; /* Hide text logo by default */
         }
 
         .header-buttons {
@@ -80,17 +78,41 @@
             margin-bottom: 20px;
         }
 
-        .hero {
-            background-color: #1f1f1f;
-            padding: 100px 20px;
-            text-align: center;
+        .app-info {
             margin-top: 50px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .cta {
+        .app-info img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .app-description {
+            margin-bottom: 20px;
+        }
+
+        .swiper-container {
             margin-top: 50px;
+            padding-bottom: 50px; /* Adjust for navigation buttons */
+        }
+
+        .swiper-slide {
+            background-color: #444;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .swiper-slide img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
         }
 
         .cta .btn {
@@ -116,102 +138,14 @@
             bottom: 0; /* Stick footer to the bottom */
             width: 100%; /* Full width */
         }
-        
-        .swiper-container {
-            margin-top: 50px;
-            padding-bottom: 50px; /* Adjust for navigation buttons */
-        }
-        
-        .swiper-slide {
-            background-color: #444;
-            color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        
-        .swiper-slide img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        .search-form {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .search-form input[type="text"] {
-            padding: 10px;
-            width: 300px;
-            border-radius: 5px 0 0 5px;
-            border: none;
-        }
-
-        .search-form button {
-            padding: 10px 20px;
-            background-color: #0073aa;
-            color: #fff;
-            border: none;
-            border-radius: 0 5px 5px 0;
-            cursor: pointer;
-        }
-
-        .search-form button:hover {
-            background-color: #005d7e;
-        }
-
-        .section-title {
-            color: #fff;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        
-        .app-icon {
-            width: 100px;
-            height: 100px;
-            background-color: #fff; /* Placeholder color */
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-
-        .app-name {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .app-description {
-            margin-bottom: 20px;
-        }
-
-        .sub-hero {
-            margin-top: 50px;
-        }
-
-        .sub-hero-content {
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #333;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .swiper-button-prev,
-        .swiper-button-next {
-            color: #fff;
-        }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="#">
-                <img id="logo-img" src="logo.png" alt="RTECH-hub Logo" onload="hideTextLogo()"> <!-- Image logo -->
-                <span id="logo-text">RTECH-hub</span> <!-- Text logo -->
+            <a href="index.html">
+                <img src="logo.png" alt="RTECH-hub Logo"> <!-- Image logo -->
+                <span>RTECH-hub</span> <!-- Text logo -->
             </a>
         </div>
         
@@ -222,122 +156,45 @@
     </header>
 
     <div class="container">
-        <section class="hero">
-            <h1>Welcome to RTECH-hub</h1>
-            <p>Your one-stop destination for all your app needs.</p>
-        </section>
-
-        <div class="cta">
-            <a href="#" class="btn">Get Started</a>
-        </div>
-
-        <div class="search-form">
-            <form action="name-app.html" method="GET">
-                <input type="text" name="app" placeholder="Search for an app">
-                <button type="submit">Search</button>
-            </form>
-        </div>
-
-        <!-- Featured Apps Section -->
-        <div class="sub-hero">
-            <div class="container">
-                <h2 class="section-title">Featured Apps</h2>
-                <div class="sub-hero-content">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <!-- Slide 1 -->
-                            <div class="swiper-slide">
-                                <!-- Template for App 1 -->
-                                <div class="app-icon"></div>
-                                <div class="app-name">App 1</div>
-                                <div class="app-description">Description of App 1 goes here.</div>
-                            </div>
-                            <!-- Slide 2 -->
-                            <div class="swiper-slide">
-                                <!-- Template for App 2 -->
-                                <div class="app-icon"></div>
-                                <div class="app-name">App 2</div>
-                                <div class="app-description">Description of App 2 goes here.</div>
-                            </div>
-                            <!-- Slide 3 -->
-                            <div class="swiper-slide">
-                                <!-- Template for App 3 -->
-                                <div class="app-icon"></div>
-                                <div class="app-name">App 3</div>
-                                <div class="app-description">Description of App 3 goes here.</div>
-                            </div>
-                            <!-- Slide 4 -->
-                            <div class="swiper-slide">
-                                <!-- Template for App 4 -->
-                                <div class="app-icon"></div>
-                                <div class="app-name">App 4</div>
-                                <div class="app-description">Description of App 4 goes here.</div>
-                            </div>
-                            <!-- Slide 5 -->
-                            <div class="swiper-slide">
-                                <!-- Template for App 5 -->
-                                <div class="app-icon"></div>
-                                <div class="app-name">App 5</div>
-                                <div class="app-description">Description of App 5 goes here.</div>
-                            </div>
-                        </div>
-                        <!-- Navigation buttons -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                </div>
+        <div class="app-info">
+            <img src="app-icon.png" alt="App Icon">
+            <h1>App Name</h1>
+            <p class="app-description">App description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="cta">
+                <a href="#" class="btn">Get App</a>
             </div>
         </div>
 
-        <!-- New Apps Section -->
-        <div class="sub-hero">
-            <div class="container">
-                <h2 class="section-title">New Apps</h2>
-                <div class="sub-hero-content">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <!-- Slide 1 -->
-                            <div class="swiper-slide">
-                                <!-- Template for App 1 -->
-                                <div class="app-icon"></div>
-                                <div class="app-name">App 1</div>
-                                <div class="app-description">Description of App 1 goes here.</div>
-                            </div>
-                            <!-- Slide 2 -->
-                            <div class="swiper-slide">
-                                <!-- Template for App 2 -->
-                                <div class="app-icon"></div>
-                                <div class="app-name">App 2</div>
-                                <div class="app-description">Description of App 2 goes here.</div>
-                            </div>
-                            <!-- Slide 3 -->
-                            <div class="swiper-slide">
-                                <!-- Template for App 3 -->
-                                <div class="app-icon"></div>
-                                <div class="app-name">App 3</div>
-                                <div class="app-description">Description of App 3 goes here.</div>
-                            </div>
-                            <!-- Slide 4 -->
-                            <div class="swiper-slide">
-                                <!-- Template for App 4 -->
-                                <div class="app-icon"></div>
-                                <div class="app-name">App 4</div>
-                                <div class="app-description">Description of App 4 goes here.</div>
-                            </div>
-                            <!-- Slide 5 -->
-                            <div class="swiper-slide">
-                                <!-- Template for App 5 -->
-                                <div class="app-icon"></div>
-                                <div class="app-name">App 5</div>
-                                <div class="app-description">Description of App 5 goes here.</div>
-                            </div>
-                        </div>
-                        <!-- Navigation buttons -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <h2>Slide 1</h2>
+                    <p>Description for Slide 1</p>
+                    <img src="app-image-1.jpg" alt="App Image 1">
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <h2>Slide 2</h2>
+                    <p>Description for Slide 2</p>
+                    <img src="app-image-2.jpg" alt="App Image 2">
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <h2>Slide 3</h2>
+                    <p>Description for Slide 3</p>
+                    <img src="app-image-3.jpg" alt="App Image 3">
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <h2>Slide 4</h2>
+                    <p>Description for Slide 4</p>
+                    <img src="app-image-4.jpg" alt="App Image 4">
                 </div>
             </div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
 
@@ -356,18 +213,6 @@
                 prevEl: '.swiper-button-prev',
             },
         });
-
-        function hideTextLogo() {
-            var img = document.getElementById('logo-img');
-            var text = document.getElementById('logo-text');
-            if (img.complete) {
-                text.style.display = 'none';
-            } else {
-                img.addEventListener('load', function() {
-                    text.style.display = 'none';
-                });
-            }
-        }
     </script>
 </body>
 </html>
