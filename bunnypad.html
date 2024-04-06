@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BunnyPad - App Page</title>
+    <title>RTECH-hub - Landing Page</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
         /* Your CSS styles here */
@@ -22,13 +22,51 @@
             position: relative;
             margin: 0;
             padding-bottom: 70px;
+            overflow-y: hidden; /* Hide vertical scrollbar */
         }
 
-        header, footer {
+        header {
             background-color: #333;
             color: #fff;
             padding: 20px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            max-width: 200px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        header .logo a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-button {
+            padding: 10px 20px;
+            background-color: #0073aa;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .header-button:hover {
+            background-color: #005d7e;
         }
 
         .container {
@@ -36,34 +74,27 @@
             margin: 0 auto;
             padding: 20px;
             text-align: center;
+            overflow-y: auto; /* Add vertical scrollbar to container if content overflows */
         }
 
-        .app-title {
-            font-size: 32px;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-
-        .app-description {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #aaa;
-        }
-
-        .app-screenshots {
-            display: flex;
-            justify-content: center;
+        h1 {
             margin-bottom: 20px;
         }
 
-        .app-screenshots img {
-            width: 300px;
-            height: auto;
-            margin: 0 10px;
+        .hero {
+            background-color: #1f1f1f;
+            padding: 100px 20px;
+            text-align: center;
+            margin-top: 50px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .download-button {
+        .cta {
+            margin-top: 50px;
+        }
+
+        .cta .btn {
             padding: 15px 30px;
             background-color: #0073aa;
             color: #fff;
@@ -71,13 +102,27 @@
             border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
-            transition: background-color 0.3s ease;
         }
 
-        .download-button:hover {
+        .cta .btn:hover {
             background-color: #005d7e;
         }
 
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .swiper-container {
+            margin-top: 50px;
+            padding-bottom: 50px;
+        }
+        
         .swiper-slide {
             background-color: #444;
             color: #fff;
@@ -89,48 +134,87 @@
             justify-content: center;
             text-align: center;
         }
-
+        
         .swiper-slide img {
-            width: 200px;
+            max-width: 100%;
             height: auto;
             margin-bottom: 20px;
-            border-radius: 10px;
         }
 
-        .swiper-button-prev, .swiper-button-next {
+        .search-form {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-form input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px 0 0 5px;
+            border: none;
+        }
+
+        .search-form button {
+            padding: 10px 20px;
+            background-color: #0073aa;
             color: #fff;
-            font-size: 24px;
-            margin: 0 10px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .search-form button:hover {
+            background-color: #005d7e;
         }
     </style>
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">RTECH-hub</a>
+        <div class="logo">
+            <a href="index.html">
+                <span id="logo-text">RTECH-hub</span>
+            </a>
+        </div>
+        
+        <div class="header-buttons">
+            <button class="header-button">About Us</button>
+            <button class="header-button">Hub App</button>
+        </div>
     </header>
 
     <div class="container">
-        <h1 class="app-title">BunnyPad</h1>
-        <p class="app-description">A cute version of a notepad for all your note-taking needs.</p>
+        <section class="hero">
+            <h1>Welcome to RTECH-hub</h1>
+            <p>Your one-stop destination for all your app needs.</p>
+        </section>
 
-        <div class="app-screenshots">
-            <img src="bunnypad.png" alt="Screenshot 1">
-            <img src="bunnypad2.png" alt="Screenshot 2">
+        <div class="cta">
+            <a href="#" class="btn">Get Started</a>
         </div>
 
-        <a href="bunnypad.zip" class="download-button">Download Now</a>
+        <div class="search-form">
+            <form action="name-app.html" method="GET">
+                <input type="text" name="app" placeholder="Search for an app">
+                <button type="submit">Search</button>
+            </form>
+        </div>
 
         <div class="swiper-container">
             <div class="swiper-wrapper">
+                <!-- Most Used Apps -->
                 <div class="swiper-slide">
-                    <h2>Features</h2>
-                    <p>Feature 1 description goes here.</p>
-                    <p>Feature 2 description goes here.</p>
+                    <h2>Most Used Apps</h2>
+                    <!-- Add apps here -->
                 </div>
+                <!-- New Apps -->
                 <div class="swiper-slide">
-                    <h2>Reviews</h2>
-                    <p>Review 1 description goes here.</p>
-                    <p>Review 2 description goes here.</p>
+                    <h2>New Apps</h2>
+                    <!-- Add apps here -->
+                </div>
+                <!-- Featured Apps -->
+                <div class="swiper-slide">
+                    <h2>Featured Apps</h2>
+                    <!-- Add apps here -->
                 </div>
             </div>
             <div class="swiper-button-prev"></div>
@@ -145,7 +229,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
+            slidesPerView: 3,
             spaceBetween: 30,
             navigation: {
                 nextEl: '.swiper-button-next',
