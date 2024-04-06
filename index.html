@@ -161,15 +161,15 @@
         }
 
         .app-card {
+            padding: 20px;
             background-color: #333;
             border-radius: 10px;
-            padding: 20px;
-            margin: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
         .app-card img {
-            width: 100px;
+            max-width: 100px;
             height: auto;
             border-radius: 10px;
         }
@@ -229,33 +229,25 @@
             </form>
         </div>
 
+        <!-- Featured Apps -->
         <div class="section-title">Featured Apps</div>
         <div class="app-slider swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="app-card">
-                        <img src="bnnypd.png" alt="Bunny Pad">
-                        <h3>Bunny Pad</h3>
-                        <p>A cute version of notepad</p>
-                        <a href="bunny-pad.html" class="btn">Get</a>
-                    </div>
-                </div>
-                <!-- Add more app cards here -->
+                <!-- App cards will be dynamically generated here -->
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
 
+        <!-- New Apps -->
         <div class="section-title">New Apps</div>
         <div class="app-slider swiper-container">
             <div class="swiper-wrapper">
-                <!-- Add new apps here -->
+                <!-- App cards will be dynamically generated here -->
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
-
-        <!-- Add more sections and app sliders as needed -->
     </div>
 
     <footer>
@@ -265,15 +257,55 @@
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+        // Sample app data
+        var apps = [
+            {
+                name: "Bunny Pad",
+                description: "A cute version of notepad",
+                icon: "bnnypd.png",
+                link: "bunny-pad.html"
             },
-        });
+            // Add more app objects here
+        ];
 
+        // Function to generate app cards
+        function generateAppCards(apps, container) {
+            var swiperWrapper = document.querySelector(container + ' .swiper-wrapper');
+            apps.forEach(function(app) {
+                var slide = document.createElement('div');
+                slide.classList.add('swiper-slide');
+
+                var card = document.createElement('div');
+                card.classList.add('app-card');
+
+                var img = document.createElement('img');
+                img.src = app.icon;
+                img.alt = app.name;
+
+                var name = document.createElement('h3');
+                name.textContent = app.name;
+
+                var description = document.createElement('p');
+                description.textContent = app.description;
+
+                var link = document.createElement('a');
+                link.href = app.link;
+                link.classList.add('btn');
+                link.textContent = 'Get';
+
+                card.appendChild(img);
+                card.appendChild(name);
+                card.appendChild(description);
+                card.appendChild(link);
+
+                slide.appendChild(card);
+                swiperWrapper.appendChild(slide);
+            });
+        }
+
+        // Call the function to generate app cards
+        generateAppCards(apps, '.app-slider');
+        
         function hideTextLogo() {
             var img = document.getElementById('logo-img');
             var text = document.getElementById('logo-text');
