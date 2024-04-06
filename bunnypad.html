@@ -6,7 +6,6 @@
     <title>BunnyPad - App Landing Page</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
-        /* Your CSS styles here */
         /* Reset CSS */
         * {
             margin: 0;
@@ -21,96 +20,67 @@
             min-height: 100vh;
             position: relative;
             margin: 0;
-            padding-bottom: 70px;
+            padding-bottom: 70px; /* Adjust for footer height */
         }
 
         header, footer {
             background-color: #333;
             color: #fff;
             padding: 20px;
-            text-align: center;
         }
 
-        .logo {
-            display: block;
-            margin: 0 auto;
-            max-width: 200px;
-            margin-bottom: 20px;
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             text-align: center;
         }
 
-        h1, h2 {
-            color: #fff;
-            margin-bottom: 20px;
-        }
-
-        .swiper-container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
         .swiper-slide img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .description {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-
-        .download-button {
-            padding: 15px 30px;
-            background-color: #0073aa;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        .download-button:hover {
-            background-color: #005d7e;
+            width: 100%;
+            max-height: 300px; /* Adjust height as needed */
+            object-fit: cover; /* Ensure images don't stretch */
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="logo.png" alt="BunnyPad Logo">
+            <a href="#">
+                <span id="logo-text">BunnyPad</span>
+            </a>
         </div>
     </header>
 
     <div class="container">
+        <h1>BunnyPad</h1>
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="bunnypad.png" alt="BunnyPad Screenshot"></div>
-                <div class="swiper-slide"><img src="bunnypad2.png" alt="BunnyPad Screenshot"></div>
+                <div class="swiper-slide">
+                    <img src="bunnypad.png" alt="Screenshot 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="bunnypad2.png" alt="Screenshot 2">
+                </div>
+                <!-- Add more screenshots here -->
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
-
         <div class="description">
-            <h1>BunnyPad</h1>
-            <p>This is the description of BunnyPad. It's a fantastic app for your notetaking needs.</p>
-            <a href="/path/to/bunnypad" class="download-button">Download Now</a>
+            <p>This is the description of BunnyPad. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur lacinia ex, non facilisis ex semper non. Nulla facilisi.</p>
+        </div>
+        <div class="cta">
+            <a href="bunnypad_folder/" class="btn">Download Now</a>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 RTECH-hub. All rights reserved.</p>
+        <p>&copy; 2024 BunnyPad. All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
