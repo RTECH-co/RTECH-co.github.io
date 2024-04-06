@@ -164,6 +164,22 @@
         .search-form button:hover {
             background-color: #005d7e;
         }
+
+        /* Styles for app icons */
+        .app {
+            margin-bottom: 20px;
+        }
+
+        .app img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .app p {
+            color: #ddd;
+        }
     </style>
 </head>
 <body>
@@ -186,6 +202,10 @@
             <p>Your one-stop destination for all your app needs.</p>
         </section>
 
+        <div class="cta">
+            <a href="#" class="btn">Get Started</a>
+        </div>
+
         <div class="search-form">
             <form action="name-app.html" method="GET">
                 <input type="text" name="app" placeholder="Search for an app">
@@ -199,56 +219,30 @@
                 <div class="swiper-slide">
                     <h2>Most Used Apps</h2>
                     <div class="app-icons">
-                        <!-- Add apps here -->
+                        <!-- App 1: BunnyPad -->
                         <div class="app">
-                            <img src="app1.png" alt="App 1">
-                            <p>App 1</p>
+                            <img src="bnnypd.png" alt="BunnyPad">
+                            <p>A cute version of notepad</p>
+                            <a href="bunnypad-details.html" class="btn">Get</a>
                         </div>
-                        <div class="app">
-                            <img src="app2.png" alt="App 2">
-                            <p>App 2</p>
-                        </div>
-                        <div class="app">
-                            <img src="app3.png" alt="App 3">
-                            <p>App 3</p>
-                        </div>
-                        <div class="app">
-                            <img src="app4.png" alt="App 4">
-                            <p>App 4</p>
-                        </div>
-                        <div class="app">
-                            <img src="app5.png" alt="App 5">
-                            <p>App 5</p>
-                        </div>
+                        <!-- Add more apps here -->
                     </div>
                 </div>
                 <!-- Section 2: New Apps -->
                 <div class="swiper-slide">
                     <h2>New Apps</h2>
                     <div class="app-icons">
-                        <!-- Add apps here -->
-                        <div class="app">
-                            <img src="app6.png" alt="App 6">
-                            <p>App 6</p>
-                        </div>
-                        <div class="app">
-                            <img src="app7.png" alt="App 7">
-                            <p>App 7</p>
-                        </div>
-                        <div class="app">
-                            <img src="app8.png" alt="App 8">
-                            <p>App 8</p>
-                        </div>
-                        <div class="app">
-                            <img src="app9.png" alt="App 9">
-                            <p>App 9</p>
-                        </div>
-                        <div class="app">
-                            <img src="app10.png" alt="App 10">
-                            <p>App 10</p>
-                        </div>
+                        <!-- Add more apps here -->
                     </div>
                 </div>
+                <!-- Section 3: Featured Apps -->
+                <div class="swiper-slide">
+                    <h2>Featured Apps</h2>
+                    <div class="app-icons">
+                        <!-- Add more apps here -->
+                    </div>
+                </div>
+                <!-- Add more sections here -->
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
