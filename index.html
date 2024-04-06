@@ -6,176 +6,33 @@
     <title>RTECH-hub - Landing Page</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
-        /* Your CSS styles here */
-        /* Reset CSS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #fff;
-            min-height: 100vh;
-            position: relative; /* Make body a positioning context */
-            margin: 0; /* Remove default body margin */
-            padding-bottom: 70px; /* Adjust for footer height */
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        header .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        header .logo img {
-            max-width: 200px; /* Set maximum width */
-            height: auto; /* Maintain aspect ratio */
-            margin-right: 10px;
-        }
-
-        header .logo a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 24px;
-            display: none; /* Hide text logo by default */
-        }
-
-        .header-buttons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .header-button {
-            padding: 10px 20px;
-            background-color: #0073aa;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .header-button:hover {
-            background-color: #005d7e;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-        }
-
-        .hero {
-            background-color: #1f1f1f;
-            padding: 100px 20px;
-            text-align: center;
-            margin-top: 50px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .cta {
-            margin-top: 50px;
-        }
-
-        .cta .btn {
-            padding: 15px 30px;
-            background-color: #0073aa;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .cta .btn:hover {
-            background-color: #005d7e;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: absolute;
-            bottom: 0; /* Stick footer to the bottom */
-            width: 100%; /* Full width */
-        }
-        
-        .swiper-container {
-            margin-top: 50px;
-            padding-bottom: 50px; /* Adjust for navigation buttons */
-        }
-        
-        .swiper-slide {
-            background-color: #444;
-            color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        
-        .swiper-slide img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        .search-form {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .search-form input[type="text"] {
-            padding: 10px;
-            width: 300px;
-            border-radius: 5px 0 0 5px;
-            border: none;
-        }
-
-        .search-form button {
-            padding: 10px 20px;
-            background-color: #0073aa;
-            color: #fff;
-            border: none;
-            border-radius: 0 5px 5px 0;
-            cursor: pointer;
-        }
-
-        .search-form button:hover {
-            background-color: #005d7e;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #121212; color: #fff; }
+        header { background: #333; color: #fff; padding: 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo img { max-width: 200px; height: auto; margin-right: 10px; }
+        .header-buttons { display: flex; gap: 10px; }
+        .header-button { padding: 10px 20px; background: #0073aa; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+        .header-button:hover { background: #005d7e; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; text-align: center; }
+        .hero { background: #1f1f1f; padding: 100px 20px; text-align: center; margin-top: 50px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        .cta { margin-top: 50px; }
+        .cta .btn { padding: 15px 30px; background: #0073aa; color: #fff; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; }
+        .cta .btn:hover { background: #005d7e; }
+        footer { background: #333; color: #fff; padding: 20px 0; text-align: center; position: absolute; bottom: 0; width: 100%; }
+        .swiper-container { margin-top: 50px; }
+        .swiper-slide { background: #444; color: #fff; padding: 20px; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+        .swiper-slide img { max-width: 100%; height: auto; margin-bottom: 20px; }
+        .search-form { margin-top: 20px; display: flex; justify-content: center; }
+        .search-form input[type="text"] { padding: 10px; width: 300px; border-radius: 5px 0 0 5px; border: none; }
+        .search-form button { padding: 10px 20px; background: #0073aa; color: #fff; border: none; border-radius: 0 5px 5px 0; cursor: pointer; }
+        .search-form button:hover { background: #005d7e; }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="#">
-                <img id="logo-img" src="logo.png" alt="RTECH-hub Logo" onload="hideTextLogo()"> <!-- Image logo -->
-                <span id="logo-text">RTECH-hub</span> <!-- Text logo -->
-            </a>
+            <img src="logo.png" alt="RTECH-hub Logo">
         </div>
-        
         <div class="header-buttons">
             <button class="header-button">About Us</button>
             <button class="header-button">Hub App</button>
@@ -201,20 +58,14 @@
 
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <!-- Most Used Apps -->
                 <div class="swiper-slide">
                     <h2>Most Used Apps</h2>
-                    <!-- Add apps here -->
                 </div>
-                <!-- New Apps -->
                 <div class="swiper-slide">
                     <h2>New Apps</h2>
-                    <!-- Add apps here -->
                 </div>
-                <!-- Featured Apps -->
                 <div class="swiper-slide">
                     <h2>Featured Apps</h2>
-                    <!-- Add apps here -->
                 </div>
             </div>
             <div class="swiper-button-prev"></div>
@@ -230,24 +81,8 @@
     <script>
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 3,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
+            spaceBetween: 30
         });
-
-      function hideTextLogo() {
-    var img = document.getElementById('logo-img');
-    var text = document.getElementById('logo-text');
-    if (img.complete) {
-        text.style.display = 'none';
-    } else {
-        img.addEventListener('load', function() {
-            text.style.display = 'none';
-        });
-    }
-}
     </script>
 </body>
 </html>
