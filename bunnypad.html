@@ -44,8 +44,26 @@
 
         .swiper-slide img {
             width: 100%;
-            max-height: 300px; /* Adjust height as needed */
-            object-fit: cover; /* Ensure images don't stretch */
+            height: auto;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            background-color: #0073aa;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .btn:hover {
+            background-color: #005d7e;
         }
     </style>
 </head>
@@ -74,8 +92,9 @@
         <div class="description">
             <p>This is the description of BunnyPad. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur lacinia ex, non facilisis ex semper non. Nulla facilisi.</p>
         </div>
-        <div class="cta">
+        <div class="buttons">
             <a href="bunnypad_folder/" class="btn">Download Now</a>
+            <a href="#" class="btn">Learn More</a>
         </div>
     </div>
 
