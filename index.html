@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RTECH-hub - Main App</title>
-    <!-- WordPress Style -->
+    <title>RTECH-hub - Landing Page</title>
     <style>
         /* Reset CSS */
         * {
@@ -15,12 +14,12 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
-            color: #333;
+            background-color: #121212;
+            color: #fff;
         }
 
         header {
-            background-color: #0073aa;
+            background-color: #333;
             color: #fff;
             padding: 20px;
             display: flex;
@@ -28,11 +27,11 @@
         }
 
         header h1 {
-            margin-right: auto;
             font-size: 24px;
             text-decoration: none;
             color: #fff;
-            display: inline-block;
+            display: flex;
+            align-items: center;
         }
 
         header h1 img {
@@ -41,57 +40,29 @@
             margin-right: 10px;
         }
 
+        header h1 a {
+            text-decoration: none;
+            color: #fff;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
         }
 
         .hero {
-            background-color: #fff;
+            background-color: #1f1f1f;
             padding: 100px 20px;
             text-align: center;
             margin-top: 50px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .slider-container {
-            margin-top: 50px;
-            overflow: hidden;
-        }
-
-        .slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .app {
-            flex: 0 0 auto;
-            margin-right: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-        }
-
-        .app img {
-            width: 100%;
-            height: auto;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .app-details {
-            padding: 20px;
-        }
-
-        .app-details h2 {
-            margin-bottom: 10px;
-        }
-
-        .app-details p {
-            margin-bottom: 20px;
         }
 
         .cta {
@@ -113,7 +84,7 @@
         }
 
         footer {
-            background-color: #0073aa;
+            background-color: #333;
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -127,61 +98,18 @@
     </header>
 
     <div class="container">
-        <div class="hero">
+        <section class="hero">
             <h1>Welcome to RTECH-hub</h1>
             <p>Your one-stop destination for all your app needs.</p>
-        </div>
-
-        <div class="slider-container">
-            <div class="slider">
-                <div class="app">
-                    <img src="app1.png" alt="App 1">
-                    <div class="app-details">
-                        <h2>App 1</h2>
-                        <p>Description of App 1.</p>
-                        <a href="#" class="btn">Download</a>
-                    </div>
-                </div>
-                <div class="app">
-                    <img src="app2.png" alt="App 2">
-                    <div class="app-details">
-                        <h2>App 2</h2>
-                        <p>Description of App 2.</p>
-                        <a href="#" class="btn">Download</a>
-                    </div>
-                </div>
-                <!-- Add more apps here -->
-            </div>
-        </div>
+        </section>
 
         <div class="cta">
-            <a href="#" class="btn">View All Apps</a>
+            <a href="#" class="btn">Get Started</a>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2024 RTECH-hub. All rights reserved.</p>
     </footer>
-
-    <script>
-        const slider = document.querySelector('.slider');
-        const apps = document.querySelectorAll('.app');
-
-        let counter = 0;
-        const width = apps[0].clientWidth;
-
-        // Set initial position
-        slider.style.transform = `translateX(${-width * counter}px)`;
-
-        function nextSlide() {
-            counter++;
-            if (counter > apps.length - 1) {
-                counter = 0;
-            }
-            slider.style.transform = `translateX(${-width * counter}px)`;
-        }
-
-        setInterval(nextSlide, 3000);
-    </script>
 </body>
 </html>
