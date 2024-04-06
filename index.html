@@ -63,7 +63,6 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
         }
 
         .header-button:hover {
@@ -110,44 +109,10 @@
             border: none;
             border-radius: 0 5px 5px 0;
             cursor: pointer;
-            transition: background-color 0.3s ease;
         }
 
         .search-form button:hover {
             background-color: #005d7e;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: absolute;
-            bottom: 0; /* Stick footer to the bottom */
-            width: 100%; /* Full width */
-        }
-
-        .swiper-container {
-            margin-top: 50px;
-            padding-bottom: 50px; /* Adjust for navigation buttons */
-        }
-
-        .swiper-slide {
-            background-color: #444;
-            color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .swiper-slide img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
         }
 
         .section-title {
@@ -270,42 +235,36 @@
 
         // Function to generate app cards
         function generateAppCards(apps, container) {
-            var swiperWrapper = document.querySelector(container + ' .swiper-wrapper');
+            var swiperWrapper = document.querySelector(container + " .swiper-wrapper");
             apps.forEach(function(app) {
-                var slide = document.createElement('div');
-                slide.classList.add('swiper-slide');
-
-                var card = document.createElement('div');
-                card.classList.add('app-card');
-
-                var img = document.createElement('img');
-                img.src = app.icon;
-                img.alt = app.name;
-
-                var name = document.createElement('h3');
-                name.textContent = app.name;
-
-                var description = document.createElement('p');
-                description.textContent = app.description;
-
-                var link = document.createElement('a');
-                link.href = app.link;
-                link.classList.add('btn');
-                link.textContent = 'Get';
-
-                card.appendChild(img);
-                card.appendChild(name);
-                card.appendChild(description);
-                card.appendChild(link);
-
-                slide.appendChild(card);
-                swiperWrapper.appendChild(slide);
+                var appCard = `
+                    <div class="swiper-slide">
+                        <div class="app-card">
+                            <img src="${app.icon}" alt="${app.name}">
+                            <h3>${app.name}</h3>
+                            <p>${app.description}</p>
+                            <a href="${app.link}" class="btn">Get</a>
+                        </div>
+                    </div>
+                `;
+                swiperWrapper.innerHTML += appCard;
             });
         }
 
-        // Call the function to generate app cards
-        generateAppCards(apps, '.app-slider');
+        // Generate app cards for each section
+        generateAppCards(apps, ".app-slider");
         
+        // Initialize Swiper for each app slider
+        var swiper = new Swiper('.app-slider', {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Function to hide text logo when image logo is loaded
         function hideTextLogo() {
             var img = document.getElementById('logo-img');
             var text = document.getElementById('logo-text');
