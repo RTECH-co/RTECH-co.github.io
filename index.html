@@ -88,57 +88,6 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .cta {
-            margin-top: 50px;
-        }
-
-        .cta .btn {
-            padding: 15px 30px;
-            background-color: #0073aa;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .cta .btn:hover {
-            background-color: #005d7e;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        
-        .swiper-container {
-            margin-top: 50px;
-            padding-bottom: 50px;
-        }
-        
-        .swiper-slide {
-            background-color: #444;
-            color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        
-        .swiper-slide img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
         .search-form {
             margin-top: 20px;
             display: flex;
@@ -202,10 +151,6 @@
             <p>Your one-stop destination for all your app needs.</p>
         </section>
 
-        <div class="cta">
-            <a href="#" class="btn">Get Started</a>
-        </div>
-
         <div class="search-form">
             <form action="name-app.html" method="GET">
                 <input type="text" name="app" placeholder="Search for an app">
@@ -213,40 +158,49 @@
             </form>
         </div>
 
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!-- Section 1: Most Used Apps -->
-                <div class="swiper-slide">
-                    <h2>Most Used Apps</h2>
-                    <div class="swiper-slide-content">
-                        <!-- App 1: BunnyPad -->
+        <!-- Section 1: Most Used Apps -->
+        <div class="section">
+            <h2>Most Used Apps</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- App 1: BunnyPad -->
+                    <div class="swiper-slide">
                         <div class="app">
                             <img src="bnnypd.png" alt="BunnyPad">
                             <h3>BunnyPad</h3>
                             <p>A cute version of notepad</p>
                             <a href="bunnypad-details.html" class="btn">Get</a>
                         </div>
-                        <!-- Add more apps here -->
                     </div>
+                    <!-- Add more apps here -->
                 </div>
-                <!-- Section 2: New Apps -->
-                <div class="swiper-slide">
-                    <h2>New Apps</h2>
-                    <div class="swiper-slide-content">
-                        <!-- Add more apps here -->
-                    </div>
-                </div>
-                <!-- Section 3: Featured Apps -->
-                <div class="swiper-slide">
-                    <h2>Featured Apps</h2>
-                    <div class="swiper-slide-content">
-                        <!-- Add more apps here -->
-                    </div>
-                </div>
-                <!-- Add more sections here -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+        </div>
+
+        <!-- Section 2: New Apps -->
+        <div class="section">
+            <h2>New Apps</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Add new apps here -->
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
+        <!-- Section 3: Featured Apps -->
+        <div class="section">
+            <h2>Featured Apps</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Add featured apps here -->
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </div>
     </div>
 
