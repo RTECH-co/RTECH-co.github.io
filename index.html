@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RTECH-hub - Landing Page</title>
     <style>
+        /* Your CSS styles here */
         /* Reset CSS */
         * {
             margin: 0;
@@ -97,39 +98,63 @@
             width: 100%; /* Full width */
         }
         
-        .header-buttons {
-            display: flex;
+        .swiper-container {
+            margin-top: 50px;
+            padding-bottom: 50px; /* Adjust for navigation buttons */
         }
         
-        .header-buttons button {
-            padding: 10px 20px;
-            margin-left: 10px;
-            background-color: #555;
+        .swiper-slide {
+            background-color: #444;
             color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .swiper-slide img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
         }
 
-        .header-buttons button:hover {
-            background-color: #777;
+        .search-form {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-form input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px 0 0 5px;
+            border: none;
+        }
+
+        .search-form button {
+            padding: 10px 20px;
+            background-color: #0073aa;
+            color: #fff;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .search-form button:hover {
+            background-color: #005d7e;
         }
     </style>
-    <script>
-        function hideTextLogo() {
-            var logoText = document.getElementById('logo-text');
-            var logoImg = document.getElementById('logo-img');
-            logoText.style.display = 'none';
-            logoImg.style.display = 'inline';
-        }
-    </script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img id="logo-img" src="logo.png" alt="RTECH-hub Logo" onload="hideTextLogo()"> <!-- Image logo -->
-            <a id="logo-text" href="#">RTECH-hub</a> <!-- Text logo -->
+            <a href="#">
+                <img id="logo-img" src="logo.png" alt="RTECH-hub Logo" onload="hideTextLogo()"> <!-- Image logo -->
+                <span id="logo-text">RTECH-hub</span> <!-- Text logo -->
+            </a>
         </div>
         
         <div class="header-buttons">
@@ -147,10 +172,60 @@
         <div class="cta">
             <a href="#" class="btn">Get Started</a>
         </div>
+
+        <div class="search-form">
+            <form action="name-app.html" method="GET">
+                <input type="text" name="app" placeholder="Search for an app">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Most Used Apps -->
+                <div class="swiper-slide">
+                    <h2>Most Used Apps</h2>
+                    <!-- Add apps here -->
+                </div>
+                <!-- New Apps -->
+                <div class="swiper-slide">
+                    <h2>New Apps</h2>
+                    <!-- Add apps here -->
+                </div>
+            </div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
     </div>
 
     <footer>
         <p>&copy; 2024 RTECH-hub. All rights reserved.</p>
     </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        function hideTextLogo() {
+            var img = document.getElementById('logo-img');
+            var text = document.getElementById('logo-text');
+            if (img.complete) {
+                text.style.display = 'none';
+            } else {
+                img.addEventListener('load', function() {
+                    text.style.display = 'none';
+                });
+            }
+        }
+    </script>
 </body>
 </html>
