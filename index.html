@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RTECH-hub - Landing Page</title>
+    <title>RTECH-hub - Bunnypad</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
         /* Your CSS styles here */
@@ -21,8 +21,7 @@
             min-height: 100vh;
             position: relative;
             margin: 0;
-            padding-bottom: 70px;
-            overflow-x: hidden; /* Remove horizontal scrollbar */
+            overflow: hidden; /* Hide both horizontal and vertical scrollbar */
         }
 
         header {
@@ -32,6 +31,11 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
         }
 
         header .logo {
@@ -40,7 +44,7 @@
         }
 
         header .logo img {
-            max-width: 200px;
+            max-width: 150px;
             height: auto;
             margin-right: 10px;
         }
@@ -71,7 +75,7 @@
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 100px auto 0;
             padding: 20px;
             text-align: center;
         }
@@ -84,9 +88,9 @@
             background-color: #1f1f1f;
             padding: 100px 20px;
             text-align: center;
-            margin-top: 50px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
         }
 
         .cta {
@@ -118,9 +122,12 @@
         }
         
         .swiper-container {
-            margin-top: 50px;
+            margin-top: 20px;
             padding-bottom: 50px;
-            position: relative;
+        }
+        
+        .swiper-wrapper {
+            display: flex;
         }
         
         .swiper-slide {
@@ -133,52 +140,32 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            flex: 0 0 auto;
         }
         
         .swiper-slide img {
-            max-width: 100%;
+            max-width: 200px;
             height: auto;
             margin-bottom: 20px;
         }
 
-        .search-form {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .search-form input[type="text"] {
-            padding: 10px;
-            width: 300px;
-            border-radius: 5px 0 0 5px;
-            border: none;
-        }
-
-        .search-form button {
-            padding: 10px 20px;
-            background-color: #0073aa;
-            color: #fff;
-            border: none;
-            border-radius: 0 5px 5px 0;
-            cursor: pointer;
-        }
-
-        .search-form button:hover {
-            background-color: #005d7e;
-        }
-
-        /* Adjustments */
         .swiper-button-prev,
         .swiper-button-next {
+            background-color: #0073aa;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            z-index: 1;
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 50%;
-            padding: 10px;
-            cursor: pointer;
+            z-index: 100;
+        }
+
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            background-color: #005d7e;
         }
 
         .swiper-button-prev {
@@ -188,38 +175,12 @@
         .swiper-button-next {
             right: 10px;
         }
-
-        .swiper-button-prev.new {
-            left: 30px;
-        }
-
-        .swiper-button-next.new {
-            right: 30px;
-        }
-
-        .get-button {
-            margin-top: 20px;
-        }
-
-        .get-button a {
-            padding: 15px 30px;
-            background-color: #0073aa;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .get-button a:hover {
-            background-color: #005d7e;
-        }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="#">
+            <a href="index.html">
                 <span id="logo-text">RTECH-hub</span>
             </a>
         </div>
@@ -231,129 +192,27 @@
     </header>
 
     <div class="container">
-        <section class="hero">
-            <h1>Welcome to RTECH-hub</h1>
-            <p>Your one-stop destination for all your app needs.</p>
-        </section>
-
-        <div class="search-form">
-            <form action="name-app.html" method="GET">
-                <input type="text" name="app" placeholder="Search for an app">
-                <button type="submit">Search</button>
-            </form>
+        <div class="hero">
+            <h1>Bunnypad</h1>
+            <p>A cute version of Notepad.</p>
+            <div class="cta">
+                <a href="bunnypad.zip" class="btn">Download Now</a>
+            </div>
         </div>
 
-        <!-- Section 1: Most Used Apps -->
-        <section class="section">
-            <h2 class="section-title">Most Used Apps</h2>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- App 1: Bunny Pad -->
-                    <div class="swiper-slide">
-                        <img src="bnnypd.png" alt="Bunny Pad Icon">
-                        <h3>Bunny Pad</h3>
-                        <p>A cute version of notepad for all your writing needs.</p>
-                        <div class="get-button">
-                            <a href="bunnypad.html" class="btn">Download BunnyPad</a>
-                        </div>
-                    </div>
-                    <!-- App 2 -->
-                    <div class="swiper-slide">
-                        <img src="app2.png" alt="App 2 Icon">
-                        <h3>App 2</h3>
-                        <p>Description of App 2.</p>
-                        <div class="get-button">
-                            <a href="#">Get</a>
-                        </div>
-                    </div>
-                    <!-- App 3 -->
-                    <div class="swiper-slide">
-                        <img src="app3.png" alt="App 3 Icon">
-                        <h3>App 3</h3>
-                        <p>Description of App 3.</p>
-                        <div class="get-button">
-                            <a href="#">Get</a>
-                        </div>
-                    </div>
-                    <!-- App 4 -->
-                    <div class="swiper-slide">
-                        <img src="app4.png" alt="App 4 Icon">
-                        <h3>App 4</h3>
-                        <p>Description of App 4.</p>
-                        <div class="get-button">
-                            <a href="#">Get</a>
-                        </div>
-                    </div>
-                    <!-- App 5 -->
-                    <div class="swiper-slide">
-                        <img src="app5.png" alt="App 5 Icon">
-                        <h3>App 5</h3>
-                        <p>Description of App 5.</p>
-                        <div class="get-button">
-                            <a href="#">Get</a>
-                        </div>
-                    </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Add screenshots in swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="bunnypad.png" alt="Screenshot 1">
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-        </section>
-
-        <!-- Section 2: New Apps -->
-        <section class="section">
-            <h2 class="section-title">New Apps</h2>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- App 6 -->
-                    <div class="swiper-slide">
-                        <img src="app6.png" alt="App 6 Icon">
-                        <h3>App 6</h3>
-                        <p>Description of App 6.</p>
-                        <div class="get-button">
-                            <a href="#">Get</a>
-                        </div>
-                    </div>
-                    <!-- App 7 -->
-                    <div class="swiper-slide">
-                        <img src="app7.png" alt="App 7 Icon">
-                        <h3>App 7</h3>
-                        <p>Description of App 7.</p>
-                        <div class="get-button">
-                            <a href="#">Get</a>
-                        </div>
-                    </div>
-                    <!-- App 8 -->
-                    <div class="swiper-slide">
-                        <img src="app8.png" alt="App 8 Icon">
-                        <h3>App 8</h3>
-                        <p>Description of App 8.</p>
-                        <div class="get-button">
-                            <a href="#">Get</a>
-                        </div>
-                    </div>
-                    <!-- App 9 -->
-                    <div class="swiper-slide">
-                        <img src="app9.png" alt="App 9 Icon">
-                        <h3>App 9</h3>
-                        <p>Description of App 9.</p>
-                        <div class="get-button">
-                            <a href="#">Get</a>
-                        </div>
-                    </div>
-                    <!-- App 10 -->
-                    <div class="swiper-slide">
-                        <img src="app10.png" alt="App 10 Icon">
-                        <h3>App 10</h3>
-                        <p>Description of App 10.</p>
-                        <div class="get-button">
-                            <a href="#">Get</a>
-                        </div>
-                    </div>
+                <div class="swiper-slide">
+                    <img src="bunnypad2.png" alt="Screenshot 2">
                 </div>
-                <div class="swiper-button-prev new"></div>
-                <div class="swiper-button-next new"></div>
             </div>
-        </section>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
     </div>
 
     <footer>
@@ -362,22 +221,12 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        // Initialize Swiper sliders
-        var swiper1 = new Swiper('.swiper-container:nth-of-type(1)', {
-            slidesPerView: 3,
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
             spaceBetween: 30,
             navigation: {
-                nextEl: '.swiper-container:nth-of-type(1) .swiper-button-next',
-                prevEl: '.swiper-container:nth-of-type(1) .swiper-button-prev',
-            },
-        });
-
-        var swiper2 = new Swiper('.swiper-container:nth-of-type(2)', {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: '.swiper-container:nth-of-type(2) .swiper-button-next',
-                prevEl: '.swiper-container:nth-of-type(2) .swiper-button-prev',
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
         });
     </script>
