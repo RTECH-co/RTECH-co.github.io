@@ -51,6 +51,24 @@
             display: none; /* Hide text logo by default */
         }
 
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-button {
+            padding: 10px 20px;
+            background-color: #0073aa;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .header-button:hover {
+            background-color: #005d7e;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -159,8 +177,8 @@
         </div>
         
         <div class="header-buttons">
-            <button>About Us</button>
-            <button>Hub App</button>
+            <button class="header-button">About Us</button>
+            <button class="header-button">Hub App</button>
         </div>
     </header>
 
@@ -191,6 +209,16 @@
                 <!-- New Apps -->
                 <div class="swiper-slide">
                     <h2>New Apps</h2>
+                    <!-- Add apps here -->
+                </div>
+                <!-- Promoted Apps -->
+                <div class="swiper-slide">
+                    <h2>Promoted Apps</h2>
+                    <!-- Add apps here -->
+                </div>
+                <!-- Featured Apps -->
+                <div class="swiper-slide">
+                    <h2>Featured Apps</h2>
                     <!-- Add apps here -->
                 </div>
             </div>
@@ -230,3 +258,4 @@
     </script>
 </body>
 </html>
+
