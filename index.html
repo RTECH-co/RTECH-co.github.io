@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RTECH-hub - Bunnypad</title>
+    <title>RTECH-hub - Landing Page</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
         /* Your CSS styles here */
@@ -21,7 +21,7 @@
             min-height: 100vh;
             position: relative;
             margin: 0;
-            overflow: hidden; /* Hide both horizontal and vertical scrollbar */
+            padding-bottom: 70px;
         }
 
         header {
@@ -31,11 +31,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
         }
 
         header .logo {
@@ -44,7 +39,7 @@
         }
 
         header .logo img {
-            max-width: 150px;
+            max-width: 200px;
             height: auto;
             margin-right: 10px;
         }
@@ -75,7 +70,7 @@
 
         .container {
             max-width: 1200px;
-            margin: 100px auto 0;
+            margin: 0 auto;
             padding: 20px;
             text-align: center;
         }
@@ -88,9 +83,9 @@
             background-color: #1f1f1f;
             padding: 100px 20px;
             text-align: center;
+            margin-top: 50px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 50px;
         }
 
         .cta {
@@ -122,12 +117,8 @@
         }
         
         .swiper-container {
-            margin-top: 20px;
+            margin-top: 50px;
             padding-bottom: 50px;
-        }
-        
-        .swiper-wrapper {
-            display: flex;
         }
         
         .swiper-slide {
@@ -140,40 +131,38 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            flex: 0 0 auto;
         }
         
         .swiper-slide img {
-            max-width: 200px;
+            max-width: 100%;
             height: auto;
             margin-bottom: 20px;
         }
 
-        .swiper-button-prev,
-        .swiper-button-next {
+        .search-form {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-form input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px 0 0 5px;
+            border: none;
+        }
+
+        .search-form button {
+            padding: 10px 20px;
             background-color: #0073aa;
             color: #fff;
-            padding: 10px 20px;
             border: none;
-            border-radius: 5px;
+            border-radius: 0 5px 5px 0;
             cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 100;
         }
 
-        .swiper-button-prev:hover,
-        .swiper-button-next:hover {
+        .search-form button:hover {
             background-color: #005d7e;
-        }
-
-        .swiper-button-prev {
-            left: 10px;
-        }
-
-        .swiper-button-next {
-            right: 10px;
         }
     </style>
 </head>
@@ -192,26 +181,36 @@
     </header>
 
     <div class="container">
-        <div class="hero">
-            <h1>Bunnypad</h1>
-            <p>A cute version of Notepad.</p>
-            <div class="cta">
-                <a href="bunnypad.zip" class="btn">Download Now</a>
-            </div>
+        <section class="hero">
+            <h1>Welcome to RTECH-hub</h1>
+            <p>Your one-stop destination for all your app needs.</p>
+        </section>
+
+        <div class="search-form">
+            <form action="name-app.html" method="GET">
+                <input type="text" name="app" placeholder="Search for an app">
+                <button type="submit">Search</button>
+            </form>
         </div>
 
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <!-- Add screenshots in swiper-slide -->
+                <!-- Most Used Apps -->
                 <div class="swiper-slide">
-                    <img src="bunnypad.png" alt="Screenshot 1">
+                    <h2>Most Used Apps</h2>
+                    <!-- Add apps here -->
                 </div>
+                <!-- New Apps -->
                 <div class="swiper-slide">
-                    <img src="bunnypad2.png" alt="Screenshot 2">
+                    <h2>New Apps</h2>
+                    <!-- Add apps here -->
+                </div>
+                <!-- Featured Apps -->
+                <div class="swiper-slide">
+                    <h2>Featured Apps</h2>
+                    <!-- Add apps here -->
                 </div>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
     </div>
 
@@ -222,7 +221,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
+            slidesPerView: 3,
             spaceBetween: 30,
             navigation: {
                 nextEl: '.swiper-button-next',
