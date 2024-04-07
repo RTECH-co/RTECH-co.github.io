@@ -232,3 +232,237 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTECH-hub - Bunnypad</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        /* Your CSS styles here */
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            min-height: 100vh;
+            position: relative;
+            margin: 0;
+            overflow: hidden; /* Hide both horizontal and vertical scrollbar */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            max-width: 150px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        header .logo a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-button {
+            padding: 10px 20px;
+            background-color: #0073aa;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .header-button:hover {
+            background-color: #005d7e;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 100px auto 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .hero {
+            background-color: #1f1f1f;
+            padding: 100px 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+
+        .cta {
+            margin-top: 50px;
+        }
+
+        .cta .btn {
+            padding: 15px 30px;
+            background-color: #0073aa;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .cta .btn:hover {
+            background-color: #005d7e;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .swiper-container {
+            margin-top: 20px;
+            padding-bottom: 50px;
+        }
+        
+        .swiper-wrapper {
+            display: flex;
+        }
+        
+        .swiper-slide {
+            background-color: #444;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex: 0 0 auto;
+        }
+        
+        .swiper-slide img {
+            max-width: 300px; /* Adjust the width as needed */
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            background-color: #0073aa;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+        }
+
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            background-color: #005d7e;
+        }
+
+        .swiper-button-prev {
+            left: 10px;
+        }
+
+        .swiper-button-next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <span id="logo-text">RTECH-hub</span>
+            </a>
+        </div>
+        
+        <div class="header-buttons">
+            <button class="header-button">About Us</button>
+            <button class="header-button">Hub App</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <h1>Bunnypad</h1>
+            <p>A cute version of Notepad.</p>
+            <div class="cta">
+                <a href="bunnypad.zip" class="btn">Download Now</a>
+            </div>
+        </div>
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Add screenshots in swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="bunnypad.png" alt="Screenshot 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="bunnypad2.png" alt="Screenshot 2">
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 RTECH-hub. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>
